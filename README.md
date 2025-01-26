@@ -198,4 +198,13 @@ Strict-Transport-Security: max-age=15724800; includeSubDomains
     display: none;
 }
 ```
+![image](https://github.com/user-attachments/assets/c6cdcfb1-0464-4e47-9722-fa1244672481)
+
+```
+raw data repeater에 넣고 configuration -> 심평원 공인 ip 주소 103.206.74.1 넣고 send
+```
+![image](https://github.com/user-attachments/assets/07919ef2-9794-4a99-bca1-3063baa3bb4e)
+```
+status 410 유효성 없음.
+```
 Request, Response intercept 확인
