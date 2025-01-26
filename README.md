@@ -53,9 +53,14 @@ Tools > Proxy > Response interception rules 메뉴에서 intercept requests base
 
 해당 옵션을 선택해야 Request, Response 모두 Intercept가 가능합니다.
 ```
-
+![image](https://github.com/user-attachments/assets/cdd71cec-0e16-456f-921d-a4ab98e9f669)
+open browser proxy 문구 확인
 ```
 Proxy > Intercept 화면에서 Intercept is off를 눌러 Intercept is on으로 변경 시 트래픽 수정이 가능합니다.
 ```
 
+```
+https://www.hira.or.kr/main.do 심평원 주소 입력 -> 443으로 리다이렉팅
+리다이렉팅을 막아서 포트 80으로 검색하고 싶을 때 어떻게 해야할까
+```
 Request, Response intercept 확인
