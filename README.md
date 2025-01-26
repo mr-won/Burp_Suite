@@ -1,2 +1,1 @@
-# Burp_Suite
-Burp Suite Usage (버프 슈트 사용법 정리)
+회사에서 업무에 필요한 Burp Suite 버프 스위트 프로그램 사용법을 정리하고자 한다.
