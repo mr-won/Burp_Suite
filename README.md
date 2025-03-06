@@ -208,3 +208,7 @@ raw data repeater에 넣고 configuration -> 심평원 공인 ip 주소 103.206.
 status 410 유효성 없음.
 ```
 Request, Response intercept 확인
+
+## Burp Suite(버프스위트) Proxy 설정 방법
+
+## Burp Suite(버프스위트) 메뉴 Target
