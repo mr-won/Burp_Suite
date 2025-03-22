@@ -237,16 +237,16 @@ Request, Response intercept 확인
 
 ## BURP SUITE(버프스위트) Convert Selection 기능 사용하기
 
-취약점 점검이나 모의해킹을 하다 보면 SQL Injection, XSS 등 테스트를 할 경우 싱글 쿼터가 필터링되어 이를 아스키로 변환 후 테스트를 해야 하는 경우가 있습니다. 자동화 공격 시에는 쉽게 공격이 가능하지만 수동으로 테스트 할시에는 일일이 아스키코드표를 참조하여 변환하는 일이 번거롭고 불편할 것입니다.
+취약점 점검이나 모의해킹을 하다 보면 SQL Injection, XSS 등 테스트를 할 경우 싱글 쿼터가 필터링되어 이를 아스키로 변환 후 테스트를 해야 하는 경우가 있습니다. 자동화 공격 시에는 쉽게 공격이 가능하지만 수동으로 테스트 할시에는 일일이 아스키코드표를 참조하여 변환하는 일이 번거롭고 불편할 것입니다.          
  
-여기에서는 버프스위트 (Burp Suite)를 통하여 조금 더 쉽게 변환하는 방법을 알아보도록 하겠습니다.
-![image](https://github.com/user-attachments/assets/6f702ee9-f83f-41bb-9818-7ca1f1620752)
-버프 스위트에서 변환하고자 하는 값을 선택하고 마우스 우클릭을 한 후 "Convert selection -> Construct string"을 선택하여 확인해 보면 JavaScript, MS SQL, Oracle, MYSQL에 대하여 String 값으로 변환이 가능한 것을 확인할 수 있습니다.
+여기에서는 버프스위트 (Burp Suite)를 통하여 조금 더 쉽게 변환하는 방법을 알아보도록 하겠습니다.      
+![image](https://github.com/user-attachments/assets/6f702ee9-f83f-41bb-9818-7ca1f1620752)         
+버프 스위트에서 변환하고자 하는 값을 선택하고 마우스 우클릭을 한 후 "Convert selection -> Construct string"을 선택하여 확인해 보면 JavaScript, MS SQL, Oracle, MYSQL에 대하여 String 값으로 변환이 가능한 것을 확인할 수 있습니다.     
 
-![image](https://github.com/user-attachments/assets/71714717-970a-42c2-9f1c-3f9f8a36597e)
+![image](https://github.com/user-attachments/assets/71714717-970a-42c2-9f1c-3f9f8a36597e)     
 String 값으로 변환하여 XSS 테스트를 진행했던 과정은 아래의 블로그를 참고해 주시기 바랍니다.
-https://securitycode.tistory.com/192?category=865775
- 
+https://securitycode.tistory.com/192?category=865775          
+       
 예시)
 <script>alert('XSS TEST')</script>      
 <script>alert(String.fromCharCode(88,83,83,32,84,69,83,84))</script>    
