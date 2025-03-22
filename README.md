@@ -244,9 +244,7 @@ Request, Response intercept 확인
 ![image](https://github.com/user-attachments/assets/6f702ee9-f83f-41bb-9818-7ca1f1620752)         
 버프 스위트에서 변환하고자 하는 값을 선택하고 마우스 우클릭을 한 후 "Convert selection -> Construct string"을 선택하여 확인해 보면 JavaScript, MS SQL, Oracle, MYSQL에 대하여 String 값으로 변환이 가능한 것을 확인할 수 있습니다.     
 
-![image](https://github.com/user-attachments/assets/71714717-970a-42c2-9f1c-3f9f8a36597e)     
-String 값으로 변환하여 XSS 테스트를 진행했던 과정은 아래의 블로그를 참고해 주시기 바랍니다.
-https://securitycode.tistory.com/192?category=865775          
+![image](https://github.com/user-attachments/assets/71714717-970a-42c2-9f1c-3f9f8a36597e)             
        
 예시)
 <script>alert('XSS TEST')</script>      
