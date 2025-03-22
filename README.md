@@ -248,7 +248,7 @@ Request, Response intercept 확인
        
 예시)
 <script>alert('XSS TEST')</script>      
-<script>alert(String.fromCharCode(88,83,83,32,84,69,83,84))</script>    
+<script>alert(String.fromCharCode(88,83,83,32,84,69,83,84))</script>  // XSS TEST, 아스키 A 65 B 66 C 67
 
 
 
