@@ -211,6 +211,38 @@ status 410 유효성 없음.
 Request, Response intercept 확인
 
 ## Burp Suite(버프스위트) Proxy 설정 방법
+![image](https://github.com/user-attachments/assets/a5d79684-cfff-443c-8ab5-1c53e31f600e)
+이번에는 버프스위트 기능중 Proxy에 대해서 알아보도록 하겠습니다.Proxy는 버프스위트를 사용할때 기본으로 설정해야 하는 도구입니다.
+Proxy는 사용자 브라우저와 대상 응용프로그램 사이에서 웹 프록시 서버로 운영되며 그 중간에서 주고받는 패킷을 가로채거나 확인, 수정 등을 할 수 있습니다.   
+
+![image](https://github.com/user-attachments/assets/d31d0887-8ec0-4479-8ae6-c9fb3cb06ad6)
+버프스위트에서 Proxy를 사용하려면 Proxy 설정을 해주어야 하는데 설정 방법은Proxy -> Options -> Proxy Listeners 부분을 설정해 주시면 됩니다.    
+기본으로 본인이 사용하는 PC를 Proxy 서버로 사용을 하기 위해 127.0.0.1(루프백 IP)의 8080 포트를 사용하도록 설정하였습니다.    
+
+![image](https://github.com/user-attachments/assets/c077e025-8733-438c-8aea-62493d1dbd72)
+해당 화면은 제 블로그에 접속했을때의 패킷을 잡은 화면입니다. 이처럼 Proxy가 활성화 되면 Intercept 탭에서 주고받은 패킷을 확인 할 수 있습니다.        
+Intercept is on 상태로 설정이 되어 있어야지 기능이 활성화 되니 이점 유의하시기 바랍니다.     
+이 상태에서 Forward 버튼을 클릭하면 서버나 브라우저에 메시지를 전송하고 Drop 버튼을 클릭하면 해당 메시지를 담은 패킷을 버립니다.      
+(직접 해보면서 웹페이지 접속을 했을때 패킷이 어떻게 잡히고 화면이 어떻게 바뀌는지 보시기를 추천드립니다.)     
+버프스위트 프록시 설정 -> 인터넷 브라우저 프록시 설정 -> Intercept is on -> 웹페이지 접속(패킷확인) -> Forward 버튼을 클릭 하면서 확인 -> Intercept is off -> 인터넷 브라우저 프록시 설정 해제      
+
+![image](https://github.com/user-attachments/assets/b4601043-c0c6-44a9-aff7-c3da49d545f0)
+Action 버튼은 현재 가로챈 패킷으로 수행할 수 있는 기능을 보여주며, 해당 창에서 마우스 오른쪽 버튼을 클릭하여도 확인할 수 있습니다. 
+![image](https://github.com/user-attachments/assets/16d10e2e-e11b-4ffa-a99b-4d1b3e4f2a83)
+HTTP history 탭은 Target의 Site map와 마찬가지로 프록시를 통해서 전달된 값들을 기록하고, HTTP 의 모든 요청/응답을 확할 수 있으며 다양한 정보도 함께 출력됩니다.
+
+![image](https://github.com/user-attachments/assets/2d6adfec-df95-470a-b184-660ed912ccaa)
+HTTP history에서도 Site map과 마찬가지로 각 항목의 요청과 응답의 내용일 확인 할수 있습니다. 
+Request / Response 탭 WebSockets history 탭은 프록시를 통해서 전달되는 WebSocket의 모든 요청과 응답을 기록하고 확인할수 있습니다.
+Options 탭에도 여러가지 항목별 기능이 있는데 이 기능들을 살펴 보면
+- 1. Proxy Listeners- 웹 브라우저로 들어오는 연결을 수신하는 프록시 서버를 설정할수 있고, 브라우저에서 요청하거나 응답받는 모든 항목을 모니터링하고 가로챌수 있다.
+- 2. Intercept Client Requests- 클라이언트가 요청하는 패킷을 가로채는 규칙을 지정할 수 있다.
+- 3 Intercept Server Responses- 서버에서 응답하는 패킷을 가로채는 규칙을 지정할 수 있다.
+- 4. Intercept WebSockets Messages- 가로채려는 항목에 WebSocket을 추가할 것인가 설정한다.
+- 5. Response Modification- 서버에서 전달하는 응답을 정해진 내용에 따라 자동으로 수정해 주는 옵션이다.
+- 6. Match and Replace- Proxy를 통한 요청과 응답에 일치하는 항목이 있으면 자동으로 수정한다.
+- 7. SSL Pass Through- Proxy를 지나는 서버에서 SSL연결을 사용하는 경우 가로채지 않고 그냥 통과 시키도록 설정 하는 옵션
+- 8. Miscellaneous- Proxy 동작의 세부적인 설정을 할수 있는 옵션그럼 Proxy에 대해서는 여기서 마무리 하도록 하겠습니다.
 
 ## Burp Suite(버프스위트) 메뉴 Target
 
