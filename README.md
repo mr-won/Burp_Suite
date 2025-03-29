@@ -245,6 +245,35 @@ Options 탭에도 여러가지 항목별 기능이 있는데 이 기능들을 �
 - 8. Miscellaneous- Proxy 동작의 세부적인 설정을 할수 있는 옵션그럼 Proxy에 대해서는 여기서 마무리 하도록 하겠습니다.
 
 ## Burp Suite(버프스위트) 메뉴 Target
+Target먼저 버프스위트를 사용하시려면 프록시 서버를 설정하셔야 합니다.           
+모르시는 분들은 앞에 올려 놓은 글들을 참고해주시기 바랍니다.        
+Target 탭은 애플리케이션의 정보들을 저장하고, 목록화하여 보여주며, Target 탭의 하위 항목은 Site map 과 Scope 항목으로 구성되어 있는데 먼저 Site map 를 알아보도록 하겠습니다.        
+1.1 Site map 버프 스위트를 실행한 후 특정 웹사이트에 접속을 하시면 웹사이트의 응답으로부터 추측할 수 있는 콘텐츠를 Target의 Site map 항목에 추가 하게 됩니다.               
+
+![image](https://github.com/user-attachments/assets/38cda707-2895-4ab5-a11e-8a1dec4c069f)
+Site map을 통하여 웹 사이트의 구조를 쉽게 파악할수 있습니다.                    
+해당 그림을 보시면 제가 접속한 사이트(securitycode.tistory.com) 외에도 많은 사이트 들이 나오는걸 보실수 있을실 겁니다.                
+웹 사이트를 접속했을때 추가로 생성되는 항목은 회색으로 표시되고 실제 접속한 페이지는 검정색으로 표시되니 한번 직접 확인해 보시기 바랍니다.
+Site map을 통하여 공격에 취약한 부분을 찾거나, 해당사이트의 정보를 수집하는데 사용되기도 합니다.             
+Site map는 크게 3가지로 나뉠수 있는데 그 항목은 다음과 같습니다. 트리 뷰(Tree View), 테이블 뷰(Table View), Request/Respones          
+
+Tree View - 사이트의 항목을 트리 형태로 보여줍니다. 도메인, 파일, 소스코드 등                
+Table View - 트리 뷰에서 선택한 항목의 세부적인 내용을 표시해 줍니다. Host, Method, HTTP 상태 코드 등 (인터넷에 확인하시면 HTTP 상태 코드들이 나와있으니 이부분도 확인해 보시기 바랍니다)  
+  
+         
+Request/Response - 테이블 뷰에서 선택한 항목의 요청과 응답 결과를 확인할수 있습니다.Site map 바로 밑에 Filter를 통하여 필터링을 할수 있으니 한번씩 적용해 보시기 바랍니다.          
+
+![image](https://github.com/user-attachments/assets/cdc755de-aef4-47ad-89b9-9fce3b7f9e86)
+1.2 Scope현재 작업할 호스트 및 URL 범위를 설정하며, "범위 포함", "범위 제외" 두 가지 항목으로 구성 되어 있습니다.
+
+![image](https://github.com/user-attachments/assets/062c1f41-86be-4ed1-8e19-41dbf253e640)
+
+![image](https://github.com/user-attachments/assets/629427f3-8bff-429d-ab8d-79a77185429c)
+
+다음과 같이 항목을 선택 후 Add to scope를 누르시고 scope 탭을 확인해 보시면 추가 되있는 것을 확인할수 있으십니다.            
+Add to scope / Remove from scope- 선택한 항목을 필터링을 위한 목록에 추가하거나 삭제하고, 추가한 항목은 Scope 탭에서 확인할수 있으며 필터링을 이용하는 경우 적용된다.               
+그럼 Target 탭에 대해서는 여기서 마무리 하도록 하겠습니다.           
+
 
 ## Burp Suite(버프스위트) 메뉴 Proxy
 
