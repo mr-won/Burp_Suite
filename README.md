@@ -249,6 +249,43 @@ Options 탭에도 여러가지 항목별 기능이 있는데 이 기능들을 �
 ## Burp Suite(버프스위트) 메뉴 Proxy
 
 ## Burp Suite(버프스위트) 메뉴 Spider
+버프스위트의 Spider는 웹 페이지의 데이터를 추출하는 크롤링 이라고 생각하시면 됩니다.
+크롤링이 궁금하시다면 인터넷 검색을 해보는것도 하나의 공부 방법이겠죠?Spider를 사용할때는 꼭 검증된 테스트 페이지를 대상으로 테스트를 하시기 바랍니다. 
+정상적인 웹페이지에서 테스트를 할경우 간혹 오작동을 시킬수 있는 일이 발생을 하기 때문에 꼭 이점 유의 하시기 바랍니다.
+
+실습페이지 소개 (앞으로 포스팅을 하면서 많이 사용될 페이지들 입니다)
+
+■ testphp.vulnweb.com■ demo.testfire.net■ webjindan.co.kr
+
+웹사이트의 정보를 수집하는 방법은 크게 수동으로 하는 방법과 자동화된 툴을 사용하는 방법이 있습니다. 
+
+수동으로 하는 방법은 이 앞에서 포스팅한 Target의 Site map을 생각하시면 됩니다.
+물론 자동화된 툴들은 검색을 해보면 많은데 여기서는 버프스위트의 기능을 알아보기 위함이므로 Spider를 이용하도록 하겠습니다.
+여기서는 취약점을 테스트 할수 있는 페이지 testphp.vulnweb.com 로 진행 하도록 하겠습니다. 
+
+![image](https://github.com/user-attachments/assets/89dc45d2-ec94-4dcc-b24d-d72b8ab451b0)
+위에 보이는 화면은 Spider 하기 전에 화면 이니 참고 하시기 바랍니다.
+
+![image](https://github.com/user-attachments/assets/93f96c1b-0b0a-4355-9aab-e1e8ff76a6da)
+Spider 실행 하는 방법은 해상 애플리케이션에서 마우스 오른쪽 버튼을 누른후 Spider this host를 클릭해주시면 됩니다.
+
+![image](https://github.com/user-attachments/assets/721fb26e-c5ff-4370-a667-aceeaed346db)
+Spider가 실행되는 동안에 Submit Form 이라는 팝업창이 발생을 할수도 있는데 이는 사용자가 입력해야 할 폼 형식을 만나면 어떤 값을 대입할 것인지 묻는 내용입니다. 
+여기서 [lgnore form]을 클릭하여 폼 형식을 무시한 뒤에 계속 진행 하도록 하겠습니다.    
+![image](https://github.com/user-attachments/assets/8e4adea6-97cb-4402-a5f4-af2afafeead2)
+Spider를 실행한 후의 모습 차이점이 보이시나요? 일단 제일 눈에띄는 점은 실행 전에는 Site map에 각 페이지가 회색으로 표시되어 있었던 반면에 실행 후에는 모두 검은색으로 변경되어 있다는 사실을 아실수 있습니다. 앞전 포스팅에서도 설명을 했지만 방문하지 않은 페이지는 회색으로 표시되고 방문했던 페이지는 검은색으로 표시가 된다고 설명을 했던적이 있습니다.
+
+Spider가 실행되는 동안에는 Spider -> Control 탭의 Spider Status 항목 버튼이 [Spider is running]로 변경 되어 있는 것을 확인할수 있고, 다시 한번 버튼을 클릭하면 Spider is paused로 변경되면서 크롤링 작업을 일시적으로 멈추는 것을 확인할수 있습니다. 그다음은 Spider를 이용할 때 설정할 수 있는 옵션입니다. 이 옵션값들을 통하여 크롤러 설정, Spidering 설정, From 처리옵션, 인증 등을 설정 할수 있습니다.
+
+![image](https://github.com/user-attachments/assets/2a28706c-4986-437b-b100-1c9a731e3ca9)     
+Crawler Settings- 웹 콘텐츠를 크롤링하는 방법을 제어한다. 대상 사이트에 robots.txt가 있는지, 에러페이지를 감지 할지, 텍스트가 아닌 콘텐츠는 허용할지 등의 옵션을 지정할 수 있다.       
+Passive Spidering-  이 옵션을 체크하면 추가 요청 없이 방문하는 사이트의 기본적인 구조를 확인할 수 있고, 방문하는 페이지의 모든 링크를 표시한다.      
+이 옵션이 체크가 안되어 있다면 사용자가 현재 방문하여 요청한 페이지만 확인할 수 있다.From Submission- 이 부분은 조금전에 보였던 Submit Form 창이 나올 경우 어떻게 처리할 것인지 옵션을 설정할수 있는 부분입니다       
+.Application Login- Spider 중에 로그인 폼을 발견하면 어떻게 처리할 것인지 옵셕을 지정할수 있는 부분입니다.       
+Spider Engine- 크롤링 작업을 수항할 때 만들어지는 HTTP 요청을 제어하는 옵션입니다.     
+예를 들어 네트워크 실패시 재시도 획수, 요청 실패시 대기 시간 등을 설정 할수 있는 옵션 입니다.     
+과도한 설정은 대상 서버에 영향을 줄수 있으니 주의하시기 바랍니다.     
+Request Headers- Spider에서 HTTP 요청시 사용하는 헤더 값을 설정할 수 있습니다.그럼 Spider 탭에 대해서는 여기서 마무리 하도록 하겠습니다.    
 
 ## Burp Suite(버프스위트) 메뉴 Scanner
 
