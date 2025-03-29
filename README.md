@@ -4,22 +4,22 @@ IGLOO Corp, Won Chi Hyun
 Burp Suite: Burp Suite는 브라우저와 서버 간의 HTTP/S 트래픽을 가로채고 수정하기 위한 웹 프록시 기능을 포함하는 강력한 웹 애플리케이션 보안 테스트 도구입니다. 
 이를 통해 사용자는 트래픽의 다양한 측면을 분석, 수정 및 테스트할 수 있으므로 보안 전문가 및 개발자에게 널리 사용됩니다.
 ```
-[Burp Suite Download](https://portswigger.net/burp/releases/professional-community-2023-3-5?requestededition=community&requestedplatform=)     
-![image](https://github.com/user-attachments/assets/581ad742-0e30-4534-a23f-a297db3aa7e2)      
+[Burp Suite Download](https://portswigger.net/burp/releases/professional-community-2023-3-5?requestededition=community&requestedplatform=)         
+![image](https://github.com/user-attachments/assets/581ad742-0e30-4534-a23f-a297db3aa7e2)             
 ```
 그냥 Next 누릅니다. 
 ```
-![image](https://github.com/user-attachments/assets/e74fe9c1-cd07-4344-9234-4db92b79a874)    
+![image](https://github.com/user-attachments/assets/e74fe9c1-cd07-4344-9234-4db92b79a874)                 
 ```
 그냥 바로 Start 버튼 누릅니다.
-```
+```           
 ![image](https://github.com/user-attachments/assets/72cced10-71e8-4b3a-b823-89c38a905303)     
-```
+```                                    
 첫 화면입니다.
 
 Proxy > Proxy settings 선택합니다.
 ```
-![image](https://github.com/user-attachments/assets/4c8d6ccd-02f0-487c-82b5-a6f47f16cad6)     
+![image](https://github.com/user-attachments/assets/4c8d6ccd-02f0-487c-82b5-a6f47f16cad6)            
 ```
 Tools > Proxy > Proxy listeners > interface에서 IP:PORT 세팅을 확인합니다. (기본값: 127.0.0.1:8080)
 ```
@@ -54,7 +54,7 @@ Tools > Proxy > Response interception rules 메뉴에서 intercept requests base
 
 해당 옵션을 선택해야 Request, Response 모두 Intercept가 가능합니다.
 ```
-![image](https://github.com/user-attachments/assets/cdd71cec-0e16-456f-921d-a4ab98e9f669)     
+![image](https://github.com/user-attachments/assets/cdd71cec-0e16-456f-921d-a4ab98e9f669)           
 open browser proxy 문구 확인
 ```
 Proxy > Intercept 화면에서 Intercept is off를 눌러 Intercept is on으로 변경 시 트래픽 수정이 가능합니다.
@@ -199,23 +199,23 @@ Strict-Transport-Security: max-age=15724800; includeSubDomains
     display: none;
 }
 ```
-![image](https://github.com/user-attachments/assets/c6cdcfb1-0464-4e47-9722-fa1244672481)      
+![image](https://github.com/user-attachments/assets/c6cdcfb1-0464-4e47-9722-fa1244672481)               
 
 ```
 raw data repeater에 넣고 configuration -> 심평원 공인 ip 주소 103.206.74.1 넣고 send
 ```
-![image](https://github.com/user-attachments/assets/07919ef2-9794-4a99-bca1-3063baa3bb4e)       
+![image](https://github.com/user-attachments/assets/07919ef2-9794-4a99-bca1-3063baa3bb4e)                          
 ```  
 status 410 유효성 없음.
 ```
 Request, Response intercept 확인
 
 ## Burp Suite(버프스위트) Proxy 설정 방법
-![image](https://github.com/user-attachments/assets/a5d79684-cfff-443c-8ab5-1c53e31f600e)             
+![image](https://github.com/user-attachments/assets/a5d79684-cfff-443c-8ab5-1c53e31f600e)                   
 이번에는 버프스위트 기능중 Proxy에 대해서 알아보도록 하겠습니다.Proxy는 버프스위트를 사용할때 기본으로 설정해야 하는 도구입니다.
 Proxy는 사용자 브라우저와 대상 응용프로그램 사이에서 웹 프록시 서버로 운영되며 그 중간에서 주고받는 패킷을 가로채거나 확인, 수정 등을 할 수 있습니다.   
 
-![image](https://github.com/user-attachments/assets/d31d0887-8ec0-4479-8ae6-c9fb3cb06ad6)           
+![image](https://github.com/user-attachments/assets/d31d0887-8ec0-4479-8ae6-c9fb3cb06ad6)            
 버프스위트에서 Proxy를 사용하려면 Proxy 설정을 해주어야 하는데 설정 방법은Proxy -> Options -> Proxy Listeners 부분을 설정해 주시면 됩니다.    
 기본으로 본인이 사용하는 PC를 Proxy 서버로 사용을 하기 위해 127.0.0.1(루프백 IP)의 8080 포트를 사용하도록 설정하였습니다.    
 
@@ -250,7 +250,7 @@ Target먼저 버프스위트를 사용하시려면 프록시 서버를 설정하
 Target 탭은 애플리케이션의 정보들을 저장하고, 목록화하여 보여주며, Target 탭의 하위 항목은 Site map 과 Scope 항목으로 구성되어 있는데 먼저 Site map 를 알아보도록 하겠습니다.        
 1.1 Site map 버프 스위트를 실행한 후 특정 웹사이트에 접속을 하시면 웹사이트의 응답으로부터 추측할 수 있는 콘텐츠를 Target의 Site map 항목에 추가 하게 됩니다.               
 
-![image](https://github.com/user-attachments/assets/38cda707-2895-4ab5-a11e-8a1dec4c069f)        
+![image](https://github.com/user-attachments/assets/38cda707-2895-4ab5-a11e-8a1dec4c069f)         
 Site map을 통하여 웹 사이트의 구조를 쉽게 파악할수 있습니다.                    
 해당 그림을 보시면 제가 접속한 사이트(securitycode.tistory.com) 외에도 많은 사이트 들이 나오는걸 보실수 있을실 겁니다.                
 웹 사이트를 접속했을때 추가로 생성되는 항목은 회색으로 표시되고 실제 접속한 페이지는 검정색으로 표시되니 한번 직접 확인해 보시기 바랍니다.
@@ -277,16 +277,16 @@ Add to scope / Remove from scope- 선택한 항목을 필터링을 위한 목록
 
 ## Burp Suite(버프스위트) 메뉴 Proxy
 
-## Burp Suite(버프스위트) 메뉴 Spider
-버프스위트의 Spider는 웹 페이지의 데이터를 추출하는 크롤링 이라고 생각하시면 됩니다.
-크롤링이 궁금하시다면 인터넷 검색을 해보는것도 하나의 공부 방법이겠죠?Spider를 사용할때는 꼭 검증된 테스트 페이지를 대상으로 테스트를 하시기 바랍니다. 
-정상적인 웹페이지에서 테스트를 할경우 간혹 오작동을 시킬수 있는 일이 발생을 하기 때문에 꼭 이점 유의 하시기 바랍니다.
+## Burp Suite(버프스위트) 메뉴 Spider          
+버프스위트의 Spider는 웹 페이지의 데이터를 추출하는 크롤링 이라고 생각하시면 됩니다.         
+크롤링이 궁금하시다면 인터넷 검색을 해보는것도 하나의 공부 방법이겠죠?Spider를 사용할때는 꼭 검증된 테스트 페이지를 대상으로 테스트를 하시기 바랍니다.           
+정상적인 웹페이지에서 테스트를 할경우 간혹 오작동을 시킬수 있는 일이 발생을 하기 때문에 꼭 이점 유의 하시기 바랍니다.         
 
 실습페이지 소개 (앞으로 포스팅을 하면서 많이 사용될 페이지들 입니다)
+      
+■ testphp.vulnweb.com■ demo.testfire.net■ webjindan.co.kr         
 
-■ testphp.vulnweb.com■ demo.testfire.net■ webjindan.co.kr
-
-웹사이트의 정보를 수집하는 방법은 크게 수동으로 하는 방법과 자동화된 툴을 사용하는 방법이 있습니다. 
+웹사이트의 정보를 수집하는 방법은 크게 수동으로 하는 방법과 자동화된 툴을 사용하는 방법이 있습니다.            
 
 수동으로 하는 방법은 이 앞에서 포스팅한 Target의 Site map을 생각하시면 됩니다.
 물론 자동화된 툴들은 검색을 해보면 많은데 여기서는 버프스위트의 기능을 알아보기 위함이므로 Spider를 이용하도록 하겠습니다.
@@ -298,10 +298,10 @@ Add to scope / Remove from scope- 선택한 항목을 필터링을 위한 목록
 ![image](https://github.com/user-attachments/assets/93f96c1b-0b0a-4355-9aab-e1e8ff76a6da)      
 Spider 실행 하는 방법은 해상 애플리케이션에서 마우스 오른쪽 버튼을 누른후 Spider this host를 클릭해주시면 됩니다.
 
-![image](https://github.com/user-attachments/assets/721fb26e-c5ff-4370-a667-aceeaed346db)     
+![image](https://github.com/user-attachments/assets/721fb26e-c5ff-4370-a667-aceeaed346db)      
 Spider가 실행되는 동안에 Submit Form 이라는 팝업창이 발생을 할수도 있는데 이는 사용자가 입력해야 할 폼 형식을 만나면 어떤 값을 대입할 것인지 묻는 내용입니다. 
 여기서 [lgnore form]을 클릭하여 폼 형식을 무시한 뒤에 계속 진행 하도록 하겠습니다.    
-![image](https://github.com/user-attachments/assets/8e4adea6-97cb-4402-a5f4-af2afafeead2)      
+![image](https://github.com/user-attachments/assets/8e4adea6-97cb-4402-a5f4-af2afafeead2)       
 Spider를 실행한 후의 모습 차이점이 보이시나요? 일단 제일 눈에띄는 점은 실행 전에는 Site map에 각 페이지가 회색으로 표시되어 있었던 반면에 실행 후에는 모두 검은색으로 변경되어 있다는 사실을 아실수 있습니다. 앞전 포스팅에서도 설명을 했지만 방문하지 않은 페이지는 회색으로 표시되고 방문했던 페이지는 검은색으로 표시가 된다고 설명을 했던적이 있습니다.
 
 Spider가 실행되는 동안에는 Spider -> Control 탭의 Spider Status 항목 버튼이 [Spider is running]로 변경 되어 있는 것을 확인할수 있고, 다시 한번 버튼을 클릭하면 Spider is paused로 변경되면서 크롤링 작업을 일시적으로 멈추는 것을 확인할수 있습니다. 그다음은 Spider를 이용할 때 설정할 수 있는 옵션입니다. 이 옵션값들을 통하여 크롤러 설정, Spidering 설정, From 처리옵션, 인증 등을 설정 할수 있습니다.
